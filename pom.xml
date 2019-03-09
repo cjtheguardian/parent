@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.cj.theguardian</groupId>
+	<artifactId>parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<name>parent</name>
+	<packaging>pom</packaging>
+
+	<properties>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<apache.commons.lang.version>3.8.1</apache.commons.lang.version>
+		<apache.commons.math.version>3.6.1</apache.commons.math.version>
+		<joda.time.version>2.10.1</joda.time.version>
+		<log4j.version>2.11.2</log4j.version>
+
+		<cj.utils.version>0.0.1-SNAPSHOT</cj.utils.version>
+
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- my own dependencies -->
+			<dependency>
+				<groupId>com.cj.theguardian</groupId>
+				<artifactId>common-utils</artifactId>
+				<version>${cj.utils.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${apache.commons.lang.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>joda-time</groupId>
+				<artifactId>joda-time</artifactId>
+				<version>${joda.time.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-math3</artifactId>
+				<version>${apache.commons.math.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-api</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.logging.log4j</groupId>
+				<artifactId>log4j-core</artifactId>
+				<version>${log4j.version}</version>
+			</dependency>
+
+
+		</dependencies>
+	</dependencyManagement>
+
+</project>
+
