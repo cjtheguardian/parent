@@ -20,6 +20,7 @@
 		<log4j.version>2.11.2</log4j.version>
 
 		<cj.utils.version>0.0.1-SNAPSHOT</cj.utils.version>
+		<mslinks.version>1.0.4</mslinks.version>
 
 	</properties>
 
@@ -56,10 +57,30 @@
 				<artifactId>log4j-core</artifactId>
 				<version>${log4j.version}</version>
 			</dependency>
+			<dependency>
+			<groupId>com.github.vatbub</groupId>
+			<artifactId>mslinks</artifactId>
+			<version>${mslinks.version}</version>
+		</dependency>
 
 
 		</dependencies>
 	</dependencyManagement>
+	<build>
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M2</version>
+				<configuration>
+					<argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+					<useSystemClassLoader>false</useSystemClassLoader>
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+	</build>
 
 </project>
 
