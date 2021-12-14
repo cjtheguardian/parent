@@ -17,7 +17,7 @@
 		<apache.commons.lang.version>3.8.1</apache.commons.lang.version>
 		<apache.commons.math.version>3.6.1</apache.commons.math.version>
 		<joda.time.version>2.10.1</joda.time.version>
-		<log4j.version>2.11.2</log4j.version>
+		<log4j.version>2.16.0</log4j.version>
 
 		<cj.utils.version>0.0.1-SNAPSHOT</cj.utils.version>
 		<mslinks.version>1.0.4</mslinks.version>
